@@ -9,176 +9,395 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body{
+        .row {
             padding-left: 15%;
             padding-right: 15%;
-            
+            padding-top: 55px;
         }
-        home{
-            height: 500px;
+
+        body {
+            position: relative;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-bottom: 70px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 5vw;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        h3 {
+            text-shadow: 4px 4px 10px black;
+        }
+
+        h5 {
+            text-decoration-line: underline;
+            text-decoration-thickness: 3px;
+            text-decoration-color: #fa520a;
+            text-underline-offset: 6px;
+        }
+
+        .about {
+            background-color: black;
+            color: lightgray;
+        }
+
+        footer {
+            background-color: black;
+            color: lightgray;
             text-align: center;
-            vertical-align: middle;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 75px;
+        }
+
+        .banner {
+            text-align: center;
+            color: whitesmoke;
+            height: 100vh;
+            background-image: url(images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .info-block {
+            padding-bottom: 25px;
+        }
+        a {
+            color: #fa520a;
         }
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
 
-    <!--Home-->
-    <header> 
     <!--Navbar-->
-    <nav class="navbar justify-content-center navbar-expand-sm fixed-top bg-dark navbar-dark" >
-        <ul class="navbar-nav">
-            <li>
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#experience">Work Experience</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#skills">Skills</a>
-            </li>
-          </ul> 
+    <nav class="navbar navbar-expand-sm fixed-top custom-nav bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#" style="color:#fa520a">Aditya Bhatnagar</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Work Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!--End Navbar-->
-    </header>
 
     <!--Home-->
-    <section id="home">
-        <h1>Aditya Bhatnagar</h1>
-        <h3> 
-            I'm a graduate student in Mecanical Engineering, with an interest in Controls, System Modelling, and Robotics.
-        </h3>
-    </section>
+    <div class="home" id="home">
+        <div class="d-flex banner align-items-center justify-content-center">
+            <div>
+                <h1><strong>Aditya Bhatnagar</strong></h1>
+                <h3>
+                    I'm a graduate student in Mecanical Engineering, with an interest in Controls, Electric Vehicles,
+                    and Robotics.
+                </h3>
+            </div>
+        </div>
+    </div>
     <!--End Home-->
 
     <!--About Me-->
-    <section id="about">
+    <div class="about" id="about">
         <div class="row">
             <div class="col-sm-3">
-
+                <img src="images/headshot.jpg" alt="Headshot" class="mx-auto d-block my-auto rounded-circle">
             </div>
             <div class="col-sm-9">
                 <h2>About Me</h2>
 
                 <!--Mechanical Engineering-->
                 <p>
-                I'm Aditya Bhatnagar, a Gradaute Student from the Department of Mechanical Engineering at the University of Michigan 
-                Ann Arbor where I also received my Bachelor's in Mechanical Engineering with a minor in Electrical Engineering.
-                I have quite a wide range of interests ranging from Materials Science and Solid Mechanics to Robotics, Modelling, and
-                Control. My experience consists of the design and analysis of parts and assemblies 
-                using multiple CAD and FEA softwares, extensive MATLAB software development for data acquisition and analysis, and
-                the manufacturing and assmebly of components and assemblies using hand tools, mills, and lathes.
+                    I'm Aditya Bhatnagar, a Gradaute Student from the Department of Mechanical Engineering at the
+                    University of Michigan
+                    Ann Arbor where I also received my Bachelor's in Mechanical Engineering with a minor in Electrical
+                    Engineering.
+                    I have quite a wide range of interests ranging from Materials Science and Solid Mechanics to
+                    Robotics, Modelling, and
+                    Control. My experience consists of the design and analysis of parts and assemblies
+                    using multiple CAD and FEA softwares, extensive MATLAB software development for data acquisition and
+                    analysis, and
+                    the manufacturing and assmebly of components and assemblies using hand tools, mills, and lathes.
                 </p>
 
                 <!--Coding-->
                 <p>
-                A little bit farther away from the area of Mechanical Engineering, I am completely self taught and have a strong 
-                interest in programming and "homelabbing". I currently host a few services for close friends and family over Docker 
-                which is running on a headless Linux instance. I also have a few other programming related projects in development that I'll update this section with when relevant.
+                    A little bit farther away from the area of Mechanical Engineering, I am completely self taught and
+                    have a strong
+                    interest in programming and "homelabbing". I currently host a few services for close friends and
+                    family over Docker
+                    which is running on a headless Linux instance. I also have a few other programming related projects
+                    in development that I'll update this section with when relevant.
                 </p>
 
                 <!--Arts-->
                 <p>
-                When I'm not working on Mechanical Engineering projects or playing with programming, I also enjoy photography, reading, watching movies
-                and music. As a photographer, the pictures that often catch my eye are macro photographs of insects, flowers, or other
-                intricate details. My genres of choice when it come to reading are almost all fiction and fantasy, though I'm trying to 
-                branch out into more nonfiction work. Watching movies is always a pastime that I enjoy and will watch anything from sappy rom-coms 
-                to action-oriented movies, to animated masterpieces like the How to Train Your Dragon series.
-                I also enjoy occasionally playing the piano which I learnt up until high school or playing the trumpet, which I learned throughout middle
-                and high school.
+                    When I'm not working on Mechanical Engineering projects or playing with programming, I also enjoy
+                    photography, reading, watching movies
+                    and music. As a photographer, the pictures that often catch my eye are macro photographs of insects
+                    & flowers and silhouettes (see above).
+                    My genres of choice when it come to reading are almost all fiction and fantasy, though I'm trying to
+                    branch out into more nonfiction work. Watching movies is always a pastime that I enjoy and will
+                    watch anything from sappy rom-coms
+                    to action-oriented movies, to animated masterpieces like the How to Train Your Dragon series.
+                    I also enjoy occasionally playing the piano which I learnt up until high school or playing the
+                    trumpet, which I learned throughout middle
+                    and high school.
                 </p>
 
                 <h3>Contact Me</h3>
                 <p>Aditya Bhatnagar</p>
-                <p>mail@abhatnagar.org</p>
-                <p>dityb@umich.edu</p>
+                <p>mail at abhatnagar dot org</p>
+                <p>dityb at umich dot edu</p>
                 <p>(812) 927-0319 </p>
             </div>
         </div>
-    </section>
+    </div>
     <!--End About Me-->
 
     <!--Education-->
-    <section id="education">
+    <div class="education" id="education">
         <div class="row">
             <div class="col-sm-3">
                 <h5>EDUCATION</h5>
             </div>
             <div class="col-sm-9">
-                <h4>University of Michigan - Ann Arbor</h4>
-                <p>Master of Science in Mechanical Enginering, Controls Specialization • <em>Jan 2023-Dec 2023</em></p>
-                <em>Coursework:</em>
-                <ul>
-                    <li>Linear Systems Theory</li>
-                    <li>Modelling of Dynamic Systems</li>
-                </ul>
-                <h4>University of Michigan - Ann Arbor</h4>
-                <p>Bachelor of Science in Mechanical Enginering, Minor Electrical Engineering • <em>Aug 2019-Dec 2022</em> </p>
-                <em>Coursework:</em>
-                <ul>
-                    <li>Advanced Dynamics and Vibrations</li>
-                    <li>Strength of Materials</li>
-                    <li>Controls System Analysis and Design</li>
-                    <li>Digital Signals Processing</li>
-                </ul>
+                <section class="info-block">
+                    <h4>University of Michigan - Ann Arbor</h4>
+                    <p>Master of Science in Mechanical Enginering, Controls Specialization • <em>Jan 2023-Dec 2023</em>
+                    </p>
+                    <em>Notable Coursework:</em>
+                    <ul>
+                        <li>Linear Systems Theory</li>
+                        <li>Modelling of Dynamic Systems</li>
+                    </ul>
+                </section>
+                <section class="info-block">
+                    <h4>University of Michigan - Ann Arbor</h4>
+                    <p>Bachelor of Science in Mechanical Enginering, Minor Electrical Engineering • <em>Aug 2019-Dec
+                            2022</em> </p>
+                    <em>Notable Coursework:</em>
+                    <ul>
+                        <li>Advanced Dynamics and Vibrations</li>
+                        <li>Strength of Materials</li>
+                        <li>Controls System Analysis and Design</li>
+                        <li>Digital Signals Processing</li>
+                        <li>Mechanical Behavior of Materials</li>
+                    </ul>
+                </section>
             </div>
         </div>
-    </section>
+    </div>
     <!--End Education-->
-    
+
     <!--Work Experience-->
-    <section id="experience">
+    <div class="experience" id="experience">
         <div class="row">
             <div class="col-sm-3">
                 <h5>WORK EXPERIENCE</h5>
             </div>
             <div class="col-sm-9">
 
-                <section>
+                <section class="info-block">
                     <h4>Tesla Motors Inc</h4>
                     <p><em>Chassis Engineering Intern • May 2022-August 2022</em></p>
+                    <ul>
+                        <li>
+                            Designed 5 degree-of-freedom wheel speed sensor test bench to investigate the effects of
+                            sensor air gap and orientation on wheel speed sensor
+                            accuracy.
+                        </li>
+                        <li>
+                            Performed joint validation calculations and managed joint testing through JIRA to verify
+                            initial assembly and service torques through K-factor
+                            and coefficient of friction "slip" testing.
+                        </li>
+                        <li>
+                            Assisted with the research and launch of experimental braking system vehicles through
+                            installation of prototype components.
+                        </li>
+                    </ul>
                 </section>
 
-                <section>
+                <section class="info-block">
                     <h4>Quantum Signal AI</h4>
                     <p><em>Engineering Research Intern • May 2021-August 2021</em></p>
+                    <ul>
+                        <li>Investigated methods for determining shock absorber wear state based using MATLAB to process
+                            tracks of vehicle corner
+                            vibrational response data and characteristics regardless of vehicle speed, shock
+                            temperature, etc.
+                        </li>
+                        <li>Reduced existing code length for image-to-coordinate tracking algorithm by 30% and
+                            implemented MATLAB's Parallel Processing Toolbox to
+                            reduce computation time by 63%.
+                        </li>
+                        <li>
+                            Created an automated, configurable, and extensible data compiler and result plotter in
+                            MATLAB using JSON files to automatically identify
+                            dataset variables.
+                        </li>
+                    </ul>
                 </section>
 
-                <section>
-                    <h4>Estrada Lab for Experimental Soft Mechanics</h4>
+                <section class="info-block">
+                    <h4>ES Mech Lab</h4>
                     <p><em>Research Assistant • May 2020-May 2021</em></p>
+                    <ul>
+                        <li>Designed MATLAB GUI program for kinematic data acquisition and visualization of inertial
+                            cavitation events in hydrogel-like materials through
+                            image segmentation and processing
+                        </li>
+                        <li>Implemented mathematical modelling algorithms used in inertial cavitation bubble analysis
+                            such as Fourier Series fitting to bubble perimeter</li>
+                        <li>Investigated and developed 3D reconstruction algorithms from dual viewpoint videos</li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h4>University of Michigan - College of Engineering</h4>
+                    <p><em>Graduate Student Instructor for ME495 • Jan 2023-May 2023</em></p>
+                    <ul>
+                        <li>Lead 2 weekly sessions, hosted office hours to answer student questions on experiment
+                            theory, analysis of experimental data, report writing,
+                            and technical presentation. Lab topics included:
+                            <ul>
+                                <li>Semiconductor Heat Transfer and Cooling</li>
+                                <li>Flexible Drive Shaft Dynamics and Resonance</li>
+                                <li>Water Bottle Rocket Design and Modelling</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><em>Instructional Aide for ME211 • Jan 2021-May 2021 • Jan 2022-May 2022 • Aug 2022-Dec 2022</em>
+                    </p>
+                    <ul>
+                        <li>Held weekly office hour session to assist in student understanding and comprehension of
+                            course material such as:</li>
+                        <ul>
+                            <li>Statics and Structures</li>
+                            <li>Stress, Strain, Stress Transformations, Strain Transformations</li>
+                            <li>Combined Loading</li>
+                            <li>Beam Bending and Deflection</li>
+                        </ul>
+                    </ul>
                 </section>
 
             </div>
         </div>
-    </section>
+    </div>
     <!--End Work Experience-->
 
     <!--Projects-->
-    <section id="projects">
+    <div class="projects" id="projects">
         <div class="row">
             <div class="col-sm-3">
                 <h5>PROJECTS</h5>
             </div>
             <div class="col-sm-9">
 
+                <section class="info-block">
+                    <h4>PIXO VR Low-Code VR Development Research Project</h4>
+                    <em>Jan 2023-Apr 2023</em>
+                    <ul>
+                        <li>Collaborated with industry-leading VR training company PIXO VR to research low-code VR
+                            content creation companies as a part of
+                            the University of Michigan's ENTR560 Project Management and Consulting Class
+                        </li>
+                        <li>Reached out to providers based on team-synthesized requirements in order to set up demos and
+                            investigate provider compatibility and
+                            goal alignment with PIXO VR.
+                        </li>
+                        <li>
+                            Lead weekly team meetings and managed group progress through team collaboration tools like
+                            Asana.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h4>Personal Portfolio Website</h4>
+                    <em>Jan 2023-Mar 2023</em>
+                    <ul>
+                        <li>Learned and implemented HTML/CSS/Bootstrap 5 to produce aesthetically pleasing and
+                            informative personal portfolio website</li>
+                        <li>Implemented knowledge on networking systems to self-host website using Caddy on a dedicated
+                            Linux server</li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h4>Driver Seat Solutions for Reduced Mobility Drivers</h4>
+                    <em>Sep 2022-Dec 2022</em>
+                    <ul>
+                        <li>Collaborated with GM's Center for Accessibility to design a powered mechanism to asssist up
+                            to 280 lbs. reduced mobility drivers enter and
+                            egress into/out of a Chevy Equinox as a part of the University of Michigan's ME450 Capstone
+                            Design Project Class.
+                        </li>
+                        <li>Manufactured and tested mechanism prototype to evaluate design performance against
+                            engineering requirements and packaging</li>
+                        <li>Proposed various design changes based on testing results to further improve mechanism
+                            performance</li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h4>MRacing MR22 Inboard Planetary Gearbox</h4>
+                    <em>Jun 2020-May 2022</em>
+                    <ul>
+                        <li>Designed MATLAB GUI program to import vehilce telemetry data and generate a histogram-based
+                            duty cycle based on user input parameters</li>
+                        <li>Integrated <a href="https://romaxtech.com">Romax</a> Gear Train analysis software to design,
+                            simulate, and optimize a single-stage
+                            planetary gearbox for MRacings 2022 Electric FSAE contender.</li>
+                        <li>Designed gearbox in Siemens NX and conducted FEA in Ansys Mechanical to verify components
+                            stresses were acceptable for the lifetime of the gearbox
+                        </li>
+                        <li>Reduced planetary gearbox weight by 12% without sacrificying safety and strengh while
+                            increasing gearbox efficiency by 4% through the reduction
+                            of rotating components.
+                        </li>
+                        <li>Successfully managed and implemented MRacings transition from a grease-based to oil-based
+                            lubrication method for the electric FSAE gearbox</li>
+                    </ul>
+                </section>
+
+                <section class="info-block">
+                    <h4>Michigan Electric Racing - Drivetrain Group Member</h4>
+                    <em>Sep 2019-Jun 2020</em>
+                    <ul>
+                        <li>Researched and analyzed possible electric FSAE transmission reduction solutions using first principles and literature consultation to determine
+                            optimal reduction architecture for FSAE (planetary gearbox vs spur gearbox vs chain & sprocket)
+                        </li>
+                        <li>Revised existing 2019 planetary gearbox design and tolerances based on FEA and manufacture tolerance stack-up analysis</li>
+                        <li>Implemented design-for-assembly and design-for-maintenance principles in planetary gearbox redesign by accounting for toolwidths and 
+                            expected maintenance workflow
+                        </li>
+                    </ul>
+                </section>
+
             </div>
         </div>
-    </section> 
+    </div>
     <!--End Projects-->
 
     <!--Skills-->
-    <section id="skills">
+    <div class="skills" id="skills">
         <div class="row">
             <div class="col-sm-3">
                 <h5>SKILLS</h5>
@@ -192,8 +411,8 @@
             </div>
             <div class="col-sm-3">
                 <ul>
-                    <li>MATLAB</li>
-                    <li>HTML5/CSS</li>
+                    <li>MATLAB/Simulink/Simscape</li>
+                    <li>HTML5/CSS/Bootstrap 5</li>
                     <li>PHP</li>
                 </ul>
             </div>
@@ -205,8 +424,14 @@
                 </ul>
             </div>
         </div>
-    </section> 
+    </div>
     <!--End Skills-->
 
+    <footer>
+        <p style="padding-top: 10px; margin-bottom: 0; padding-bottom: 0;">© Aditya Bhatnagar 2023</p>
+        <p style="margin-top: 0; padding-top: 0;"><a href="mailto:mail@abhatnagar.org">mail@abhatnagar.org</a></p>
+    </footer>
+
 </body>
+
 </html>
